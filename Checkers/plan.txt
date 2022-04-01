@@ -1,0 +1,25 @@
+Board
+    -2d Array checkers
+    -style is checkered
+    -board is 8 by 8
+Checkers
+    -Color
+    -Location
+    -Promotion
+    -Movements allowed when clicked (maybe highlight possible options?)
+User Input
+    -Mouse based
+        -Need to detect what square is clicked on
+
+        if (clickedRow + 1 <= 7 && clickedCol + 1 < BOARD_WIDTH && tempBoard[clickedRow + 1][clickedCol + 1] == null) { //up-right 1
+                                        tempHighlightedSpaces[clickedRow + 1][clickedCol + 1] = true;
+                                    }
+                                    if (clickedRow + 1 <= 7 && clickedCol - 1 >= 0 && tempBoard[clickedRow + 1][clickedCol - 1] == null) { //up-left 1
+                                        tempHighlightedSpaces[clickedRow + 1][clickedCol - 1] = true;
+                                    }
+                                    if (clickedRow - 1 >= 0 && clickedCol + 1 < BOARD_WIDTH && tempBoard[clickedRow - 1][clickedCol + 1] == null) { //down-right 1
+                                        tempHighlightedSpaces[clickedRow - 1][clickedCol + 1] = true;
+                                    }
+                                    if (clickedRow - 1 >= 0 && clickedCol - 1 >= 0 && tempBoard[clickedRow - 1][clickedCol - 1] == null) { //down-left 1
+                                        tempHighlightedSpaces[clickedRow - 1][clickedCol - 1] = true;
+                                    }
